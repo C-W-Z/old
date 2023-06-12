@@ -41,11 +41,12 @@ html {
 	--blockquote-color: #000000;
 	--mark-color: #ccc541;
 	--mark-selected-color: #009fc6;
-	--header-tag-color: #a3a3a3;;
+	--header-tag-color: #a3a3a3;
 	--text-color: #dfe4ed;
 	--link-color: #22c5ee;
 	--link-hover-color: #10d167;
 	--star-color: #ffaa00;
+	--btn-hover-selected-color: #ff2400;
 }
 body {
 	min-height: 100vh;

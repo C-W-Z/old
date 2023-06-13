@@ -8,7 +8,7 @@ main section {
 .blog-title {
 	font-size: 2.4rem;
 	font-weight: 500;
-	font-family: 'Source Code Pro', monospace, Arial, sans-serif;
+	font-family: 'EB Garamond', 'Source Code Pro', monospace, Arial, sans-serif;
 }
 .blog-description {
 	margin-top: 0.5rem;
@@ -19,9 +19,7 @@ main section {
 	margin-top: 2.5rem;
 }
 article {
-	padding: 1rem 2rem;
-	
-	margin: 2.5rem;
+	margin: 2.5rem 1rem;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -36,11 +34,14 @@ a.btn {
 	padding: 0.1rem 1rem;
 }
 a.btn:hover {
-	background-color: var(--gray-blue);
+	background-color: var(--text-color);
 	color: var(--background-color);
 	cursor: pointer;
 	transition: all 0.15s ease-in-out;
 }
 a.btn:hover::selection {
 	color: var(--btn-hover-selected-color);
+}
+.header-tags {
+	text-align: start;
 }

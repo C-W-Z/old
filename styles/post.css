@@ -1,5 +1,6 @@
 article {
 	max-width: 40rem;
+	margin: 0rem 1.5rem;
 }
 
 .post-header {
@@ -11,25 +12,6 @@ article {
 }
 .post-subtitle {
 	margin: 0.25rem;
-}
-
-.header-tags .header-tag {
-	font-size: 0.8rem;
-	color: var(--header-tag-color);
-	padding: 0 0.5rem;
-}
-.header-tags time {
-	font-family: 'Source Code Pro', monospace, Arial, sans-serif;
-}
-.header-tags .icon {
-	font-size: 1rem;
-	transform: translateY(0.225rem);
-}
-.header-tags a {
-	color: var(--header-tag-color);
-}
-.header-tags a:hover {
-	color: var(--text-color);
 }
 
 .toc {
@@ -49,12 +31,14 @@ article {
 article h2 {
 	margin: 2.5rem 0;
 	font-size: 1.8rem;
+	font-family: 'EB Garamond', 'Caudex', 'Microsoft-Yahei';
 }
 .paragraph {
 	margin: 2rem 0;
 }
 .paragraph h3 {
 	font-size: 1.4rem;
+	font-family: 'Caudex', 'EB Garamond', 'Microsoft-Yahei';
 }
 .paragraph ul {
 	margin: 0.5rem 1rem;

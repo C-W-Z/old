@@ -16,6 +16,8 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
 }
 :root {
@@ -39,7 +41,7 @@ html {
 	--scarlet: #ff2400;
 
 	--background-color: #1e1e1e;
-	--scrollbar-color: #1e1e1e00;
+	--scrollbar-color: #1e1e1e;
 	--scrollbar-hover-color: #a3a3a3;
 	--selected-color: #c0e4dc4b;
 	--blockquote-color: #000000;
@@ -56,6 +58,7 @@ body {
 	min-height: 100vh;
 	background: var(--background-color);
 	color: var(--text-color);
+	-webkit-font-smoothing: antialiased;
 }
 /* scrollbar styles */
 ::-webkit-scrollbar {
@@ -93,7 +96,7 @@ a {
 	color: var(--link-color);
 	cursor: pointer;
 	text-decoration: none;
-	transition: 0.3s;
+	transition: 0.3s color;
 }
 a:hover {
 	color: var(--link-hover-color);
@@ -153,20 +156,58 @@ header .menu {
 }
 header .menu li {
 	list-style: none;
-	margin: 0 0.5rem;
+	margin: 0.25rem 0.5rem 0 0.5rem;
 	font-size: 0.8rem;
 	flex-wrap: nowrap;
+	position: relative;
+}
+header .menu li::after {
+	position: absolute;
+	top: 95%;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	opacity: 0;
+	content: '';
+	background-color: var(--text-color);
+	z-index: -2;
+	transition: none;
+}
+header .menu li:hover::after {
+	right: 0;
+	opacity: 1;
+	-webkit-transition: 0.3s right ease;
+	transition: 0.3s right ease;
+	transition-delay: 0.3s;
+}
+header .menu li a {
+	width: auto;
+	max-width: 1rem; /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
+	overflow:hidden;
+	display: inline-flex;
+	align-items: center;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+header .menu li a:hover {
+	max-width: 10rem;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+header .menu li a .text {
+	white-space: nowrap;
+  	padding-left: 0.2rem;
 }
 header .icon {
 	font-size: 1rem;
-	transform: translateY(0.225rem);
 }
 header a {
 	color: var(--text-color);
 }
 header a:hover {
-	color: var(--gold);
+	color: var(--text-color);
 }
+
 /* Glass Effect */
 .glass {
     background: linear-gradient(135deg, rgba(138, 0, 250, 0.1), rgba(7, 255, 156, 0.1));
@@ -186,6 +227,7 @@ main {
 	margin: 7.5rem 0rem;
 }
 
+/* tags for posts */
 .header-tags .header-tag {
 	font-size: 0.8rem;
 	color: var(--header-tag-color);
@@ -203,4 +245,47 @@ main {
 }
 .header-tags a:hover {
 	color: var(--text-color);
+}
+
+/* Button Styles */
+a.btn {
+	color: var(--text-color);
+	border: 2px solid var(--text-color);
+	border-radius: 3px;
+	margin-top: 0.5rem;
+	padding: 0.1rem 1rem;
+
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+
+	position: relative; /* important for the :before */
+}
+a.btn:hover {
+	color: var(--background-color);
+	cursor: pointer;
+}
+a.btn::selection {
+	color: var(--text-color);
+}
+a.btn:hover::selection {
+	color: var(--background-color);
+}
+a.btn::before {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	opacity: 0;
+	content: '';
+	background-color: var(--text-color);
+	z-index: -2;
+	-webkit-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+}
+a.btn:hover::before {
+	left: 0;
+	right: 0;
+	opacity: 1;
 }

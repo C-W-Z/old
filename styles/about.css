@@ -104,3 +104,7 @@ dfn {
 #profile-description {
 	text-align: center;
 }
+
+#profile-description .header-tags {
+	margin-top: 1rem;
+}

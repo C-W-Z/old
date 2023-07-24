@@ -1,51 +1,51 @@
 article {
-	max-width: 40rem;
-	margin: 0rem 1.5rem;
+    max-width: 40rem;
+    margin: 0rem 1.5rem;
 }
 
 .post-header {
-	padding: 1rem 0;
-	text-align: center;
+    padding: 1rem 0;
+    text-align: center;
 }
 .post-title {
-	font-size: 2rem;
+    font-size: 2rem;
 }
 .post-subtitle {
-	margin: 0.25rem;
+    margin: 0.25rem;
 }
 
 .toc {
-	margin: 2.5rem 0;
+    margin: 2.5rem 0;
 }
 .toc-title {
-	margin: 0.5rem 0;
-	font-size: 1.8rem;
+    margin: 0.5rem 0;
+    font-size: 1.8rem;
 }
 .toc a {
-	color: var(--text-color);
+    color: var(--text-color);
 }
 .toc a:hover {
-	color: var(--link-color);
+    color: var(--link-color);
 }
 
 article h2 {
-	margin: 2.5rem 0;
-	font-size: 1.8rem;
-	font-family: 'EB Garamond', 'Caudex', 'Microsoft-Yahei';
+    margin: 2.5rem 0;
+    font-size: 1.8rem;
+    font-family: 'EB Garamond', 'Caudex', 'Microsoft-Yahei';
 }
 .paragraph {
-	margin: 2rem 0;
+    margin: 2rem 0;
 }
 .paragraph h3 {
-	font-size: 1.4rem;
-	font-family: 'Caudex', 'EB Garamond', 'Microsoft-Yahei';
+    font-size: 1.4rem;
+    font-family: 'Caudex', 'EB Garamond', 'Microsoft-Yahei';
 }
 .paragraph ul {
-	margin: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
 }
 .paragraph p {
-	margin: 0.5rem 0;
+    margin: 0.5rem 0;
 }
 .star {
-	color: var(--star-color);
+    color: var(--star-color);
 }

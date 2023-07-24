@@ -9,84 +9,84 @@
     <title>404</title>
     <!--------- CSS ---------->
     <style>
-		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-		html {
-			font-size: 18px;
-		}
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
-		}
-		:root {
-			/* Theme Colors */
-			--background-color: #1e1e1e;
-			--scrollbar-color: #1e1e1e00;
-			--scrollbar-hover-color: #505050;
-			--selected-color: #c0e4dc4b;
-			--text-color: #dfe4ed;
-		}
-		body {
-			min-height: 100vh;
-			background: var(--background-color);
-			color: var(--text-color);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		/* scrollbar styles */
-		::-webkit-scrollbar {
-			width: 0.4rem;
-			background: var(--scrollbar-color);
-		}
-		::-webkit-scrollbar-thumb {
-			background:var(--scrollbar-color);
-		}
-		::-webkit-scrollbar-thumb:hover {
-			background: var(--scrollbar-hover-color);
-			border-radius: 0.2rem;
-		}
-		/* selected styles */
-		::selection {
-			background: var(--selected-color);
-		}
-		::-moz-selection {
-			background: var(--selected-color);
-		}
-		
-		/* Main Section */
-		main {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-		}
-	</style>
+        html {
+            font-size: 18px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
+        }
+        :root {
+            /* Theme Colors */
+            --background-color: #1e1e1e;
+            --scrollbar-color: #1e1e1e00;
+            --scrollbar-hover-color: #505050;
+            --selected-color: #c0e4dc4b;
+            --text-color: #dfe4ed;
+        }
+        body {
+            min-height: 100vh;
+            background: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 0.4rem;
+            background: var(--scrollbar-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background:var(--scrollbar-color);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--scrollbar-hover-color);
+            border-radius: 0.2rem;
+        }
+        /* selected styles */
+        ::selection {
+            background: var(--selected-color);
+        }
+        ::-moz-selection {
+            background: var(--selected-color);
+        }
+        
+        /* Main Section */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
 
-	<main>
-		<h1>404</h1>
-		<h2>Page Not Found</h2>
-		<p>go back home in <span id="wait-second">5</span> s</p>
-	</main>
+    <main>
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>go back home in <span id="wait-second">5</span> s</p>
+    </main>
 
-	<!--------- JavaScript ---------->
-	<script>
-		let time = 6;
-		function showTime()
-		{
-			time -= 1;
-			document.getElementById('wait-second').innerHTML= time;
-			if(time == 0)
-        		location.href='https://c-w-z.github.io/';
-			setTimeout("showTime()",1000); //每秒執行一次,showTime()
-		}
-		showTime(); //執行showTime()
-	</script>
+    <!--------- JavaScript ---------->
+    <script>
+        let time = 6;
+        function showTime()
+        {
+            time -= 1;
+            document.getElementById('wait-second').innerHTML= time;
+            if(time == 0)
+                location.href='https://c-w-z.github.io/';
+            setTimeout("showTime()",1000); //每秒執行一次,showTime()
+        }
+        showTime(); //執行showTime()
+    </script>
 
 </body>
 

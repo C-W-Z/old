@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------- Title ---------->
+    <title>花札遊戲製作 @ C-W-Z</title>
+    <!--------- Icon ---------->
+    <link rel="icon" href="../img/logo.ico">
+    <!--------- CSS ---------->
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/post.css">
+    <!--------- Material Icon ---------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--------- Highlight Code ---------->
+    <link href="../styles/prism.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header class="glass">
+        <div class="header-wrapper">
+            <h1 class="blog-name">
+                <a href="../.">CWZ</a>
+            </h1>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="../pages/posts.html">
+                            <span class="material-icons-outlined icon">article</span>
+                            <span class="text">posts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/categories.html">
+                            <span class="material-icons-outlined icon">grid_view</span>
+                            <span class="text">categories</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/tags.html">
+                            <span class="material-icons icon">sell</span>
+                            <span class="text">tags</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/about.html">
+                            <span class="material-icons icon">account_circle</span>
+                            <span class="text">about</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <article>
+                <section class="post-header">
+                    <h1 class="post-title">花札遊戲製作</h1>
+                    <div class="post-subtitle">關於我做了一個花札網頁遊戲這檔事</div>
+                    <section class="header-tags">
+                        <span class="header-tag">
+                            <time class="post-time" datetime="2023-07-24">
+                                <span class="material-icons-outlined icon">today</span>
+                                2023.7.24
+                            </time>
+                        </span>
+                        <span class="header-tag">
+                            <time class="update-time" datetime="2023-07-24">
+                                <span class="material-icons-outlined icon">event_available</span>
+                                2023.7.24
+                            </time>
+                        </span>
+                        <span class="header-tag">
+                            <span class="material-icons-outlined icon">folder</span>
+                            <a href="../pages/categories.html/#遊戲製作">遊戲製作</a>
+                        </span>
+                        <span class="header-tag">
+                            <span class="material-icons icon">edit</span>
+                            1134
+                        </span>
+                    </section>
+                </section>
+
+                <nav class="toc">
+                    <h2 class="toc-title">Content</h2>
+                    <ul class="toc-contents">
+                        <li><a href="#遊戲連結">遊戲連結</a></li>
+                        <li><a href="#前言">前言</a></li>
+                        <li><a href="#遊戲介紹">遊戲介紹</a></li>
+                        <li>
+                            <a href="#製作歷程">製作歷程</a>
+                            <ul>
+                                <li><a href="#畫面">畫面</a></li>
+                                <li><a href="#互動">互動</a></li>
+                                <li><a href="#機制">機制</a></li>
+                                <li><a href="#載入">載入</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="paragraph" id="遊戲連結">
+                    <p>遊戲本體：<a href="https://c-w-z.github.io/hanafuda/" target="_blank">https://c-w-z.github.io/hanafuda/</a></p>
+                    <p>原始碼：<a href="https://github.com/C-W-Z/hanafuda" target="_blank">https://github.com/C-W-Z/hanafuda</a></p>
+                </section>
+
+                <h2 id="前言">前言</h2>
+                <section class="paragraph">
+                    <p>這個暑假我心血來潮，突然想要做一個花牌遊戲，一開始想說用比較熟悉的Unity做，但我覺得一個牌類遊戲應該沒有很複雜，用Unity做的話檔案會很大有點浪費，而且要做成電腦還是手機的應用程式是個問題，於是後來我就研究了一下HTML的Canvas，決定把這個遊戲做在網頁上，這樣要玩就很方便了。</p>
+                </section>
+                
+                <h2 id="遊戲介紹">遊戲介紹</h2>
+                <section class="paragraph">
+                    <p>其實我把整個遊戲的規則、玩法和介紹都放在github上的<a href="https://github.com/C-W-Z/hanafuda#readme" target="_blank">README</a>了，我自認寫的滿清楚，沒玩過的人應該也看得懂，如果看不懂，玩個一二局再看一次應該就懂了，我當初也是玩了幾局之後才慢慢了解規則的。</p>
+                </section>
+
+                <h2 id="製作歷程">製作歷程</h2>
+                <section class="paragraph">
+                    <p>重點來了，這篇我不是要介紹花牌怎麼玩，而是講製作這個花牌網頁遊戲的過程。</p>
+                    <p>簡單劃分整個遊戲，可以分為：</p>
+                    <ul>
+                        <li>載入：網頁與資源的載入速度</li>
+                        <li>畫面：你看到的遊戲畫面</li>
+                        <li>機制：遊戲背後在跑的程式</li>
+                        <li>互動：玩家點擊後會發生什麼</li>
+                    </ul>
+
+                    <h3 id="畫面">畫面</h3>
+                    <p>其中，畫面的部分我採用了有限狀態機，在不同的狀態就在Canvas上畫不同的畫面或動畫，例如主畫面和遊戲過程顯然是不同的狀態，另外每個動畫也被我單獨劃自成一個狀態，動畫結束才會切換到下一個狀態。</p>
+
+                    <h3 id="互動">互動</h3>
+                    <p>實際上互動也是一樣，當玩家點擊時，我會判斷現在是什麼狀態，決定要做什麼反應，例如，現在是等待玩家選擇手牌的狀態，當玩家點擊，我就檢查玩家有沒有選到哪張手牌，如果有就進入下一個階段：選擇場牌，如果沒有就停留在這個狀態。</p>
+
+                    <h3 id="機制">機制</h3>
+                    <p>機制詳細展開就是：</p>
+                    <ul>
+                        <li>主畫面與設定、統計等功能</li>
+                        <li>
+                            遊戲過程
+                            <ul>
+                                <li>決定親權(先手)的猜大小的小遊戲</li>
+                                <li>洗牌與發牌</li>
+                                <li>玩家選擇手牌、場牌、抽牌</li>
+                                <li>電腦出牌、抽牌</li>
+                                <li>檢查是否組成役與是否こいこい</li>
+                                <li>月結算與牌局結束</li>
+                            </ul>
+                        </li>
+                        <li>資料儲存</li>
+                    </ul>
+                    
+                    <h3 id="載入">載入</h3>
+                    <p>最後，資源載入，這是一件感覺很不起眼但其實非常重要的事情，因為這對遊戲體驗影響很大，尤其我是把網頁掛在github pages上，而它的限制就是快取只有10分鐘，也就是關掉網頁10分鐘後重開，就要重新把資源下載一次(上一次下載的已經被刪掉了)，如果載入速度太慢就會很討厭。</p>
+                    <p>這邊講一下我用的加快資源載入的方法</p>
+                    <p>首先是圖片：用一個陣列把圖片名按重要程度排序記起來，可以先載入比較重要的圖片。</p>
+                    <p>其中執行到<code class="language-javascript">img.src = "path of image";</code>的時候會載入圖片。</p>
+<pre><code class="language-javascript">
+const LOAD_ORDER = [2, 3, 1, ...];
+const IMG_NUM = LOAD_ORDER.length;
+let img = new Array(IMG_NUM);
+for (let i = 0; i < IMG_NUM; i++) {
+    img[LOAD_ORDER[i]] = new Image();
+    img[LOAD_ORDER[i]].onload = onImgLoad;
+    img[LOAD_ORDER[i]].src = `${LOAD_ORDER[i]}.webp`;
+}
+function onImgLoad() {/* do something */}
+</code></pre>
+                    <p>然後是html中載入css和js檔的順序，可以用preconnect、preload和defer等語法調整不同檔案的載入順序</p>
+                    <p>以下是我的寫法，不過不保證這樣一定是載入最快的。</p>
+
+<pre><code class="language-html">
+&lt;head&gt;
+    &lt;!-- Preload & Preconnect --&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link rel="preload" as="style" href="style.css"&gt;
+    &lt;link rel="preload" as="script" href="main.js"&gt;
+    &lt;!-- Load CSS --&gt;
+    &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=某某字體&display=swap"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;!-- Load Scripts --&gt;
+    &lt;script src="main.js" defer>&lt;/script&gt;
+    &lt;script src="other.js" defer>&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+                    <p>preconnect是告訴瀏覽器你等一下要跟哪個網站連接(如果是字體則要加上crossorigin)，preload則是告訴瀏覽器哪些檔案是一定要先載完的。defer則是讓瀏覽器載入scripts時不會打斷渲染(背景載入)，同時由上到下按照順序執行scripts。</p>
+                    <p>以上面的例子，瀏覽器會先下載Google字體和style.css、main.js，然後渲染body中的元素，再執行main.js，最後才下載並執行other.js。</p>
+                </section>
+
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <a href="https://github.com/C-W-Z/c-w-z.github.io" target="_blank">© 2023 C-W-Z</a>
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>
+    </footer>
+
+    <script src="../scripts/prism.js"></script>
+</body>
+
+</html>

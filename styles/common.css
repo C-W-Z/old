@@ -20,7 +20,7 @@ html {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
+    font-family: monospace, sans-serif;
 }
 :root {
     /* Theme Colors */
@@ -60,6 +60,7 @@ body {
     min-height: 100vh;
     background: var(--background-color);
     color: var(--text-color);
+    font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 /* scrollbar styles */
@@ -96,11 +97,15 @@ a::-moz-selection {
     color: var(--mark-selected-color);
 }
 
+p {
+    font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
+}
 a {
     color: var(--link-color);
     cursor: pointer;
     text-decoration: none;
     transition: 0.3s color;
+    font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
 }
 a:hover {
     color: var(--link-hover-color);
@@ -132,9 +137,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: monospace, sans-serif;
 }
 footer a {
     color: var(--text-color);
+    font-family: inherit;
 }
 footer a:hover {
     color: var(--link-color);
@@ -146,6 +153,7 @@ header {
     z-index: 3;
     top: 0;
     left: 0;
+    font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
 }
 header .header-wrapper {
     margin: 0.2rem 1rem;
@@ -215,7 +223,8 @@ header .menu li a:hover {
 }
 header .menu li a .text {
     white-space: nowrap;
-      padding-left: 0.2rem;
+    padding-left: 0.2rem;
+    font-family: inherit;
 }
 header .icon {
     font-size: 1rem;
@@ -319,21 +328,3 @@ a.btn:hover::before {
     right: 0;
     opacity: 1;
 }
-
-.codeblock {
-    background: black;
-    overflow-x: auto;
-    padding: 1.5% 2%;
-}
-.codeblock pre, code {
-    font-family: monospace, sans-serif;
-}
-
-code .keyword {color: #957ebb;}
-code .let {color: #1e78db;}
-code .constVar {color: #c0e4dc;}
-code .function {color: #ccc541;}
-code .comment {color: #27a818;}
-code .number {color: #fa8500;}
-code .class {color: #4ebb7d;}
-code .string {color: #a56900;}

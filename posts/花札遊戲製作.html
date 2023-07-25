@@ -167,6 +167,25 @@ next_func = null;
 
                     <h3 id="互動">互動</h3>
                     <p>實際上互動也與狀態有關，當玩家點擊時，我會判斷現在是什麼狀態，決定要做什麼反應，例如，現在是等待玩家選擇手牌的狀態，當玩家點擊，我就檢查玩家有沒有選到哪張手牌，如果有就進入下一個階段：選擇場牌，如果沒有就停留在這個狀態。</p>
+                    <p>偵測滑鼠在canvas中的座標：</p>
+<pre><code class="language-javascript">
+function updateMouseXY(event) {
+    let rect = event.target.getBoundingClientRect();
+    mouse.x = (event.clientX - rect.left) / scaleRate;
+    mouse.y = (event.clientY - rect.top ) / scaleRate;
+}
+</code></pre>
+                    <p>會有scaleRate是因為canvas在網頁上的大小和實際解析度(畫素)不同，這是我設定canvas大小的code：</p>
+<pre><code class="language-javascript">
+R = window.devicePixelRatio;
+// resolution of canvas
+canvas.width = SCREEN_W * R;
+canvas.height = SCREEN_H * R;
+// auto adaptive the size of canvas by height / weight of the web page
+scaleRate = Math.min(self.innerHeight / SCREEN_H, self.innerWidth / SCREEN_W);
+canvas.style.width = SCREEN_W * scaleRate + 'px';
+canvas.style.height = SCREEN_H * scaleRate + 'px';
+</code></pre>
 
                     <h3 id="機制">機制</h3>
                     <p>機制詳細展開就是：</p>

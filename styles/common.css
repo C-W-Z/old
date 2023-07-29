@@ -20,7 +20,7 @@ html {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    font-family: monospace, sans-serif;
+    font-family: 'Source Code Pro', monospace, Arial, sans-serif;
 }
 :root {
     /* Theme Colors */
@@ -97,6 +97,9 @@ a::-moz-selection {
     color: var(--mark-selected-color);
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'EB Garamond', 'Caudex', 'Poppins';
+}
 p {
     font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
 }
@@ -137,7 +140,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: monospace, sans-serif;
+    font-family: 'Source Code Pro', monospace, Arial, sans-serif;
 }
 footer a {
     color: var(--text-color);

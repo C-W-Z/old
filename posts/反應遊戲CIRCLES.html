@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------- Title ---------->
+    <title>反應遊戲CIRCLES @ C-W-Z</title>
+    <!--------- Icon ---------->
+    <link rel="icon" href="../img/logo.ico">
+    <!--------- CSS ---------->
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/post.css">
+    <!--------- Material Icon ---------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--------- Highlight Code ---------->
+    <link href="../prism/prism.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header class="glass">
+        <div class="header-wrapper">
+            <h1 class="blog-name">
+                <a href="../.">CWZ</a>
+            </h1>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="../pages/posts.html">
+                            <span class="material-icons-outlined icon">article</span>
+                            <span class="text">posts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/categories.html">
+                            <span class="material-icons-outlined icon">grid_view</span>
+                            <span class="text">categories</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/tags.html">
+                            <span class="material-icons icon">sell</span>
+                            <span class="text">tags</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/about.html">
+                            <span class="material-icons icon">account_circle</span>
+                            <span class="text">about</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <article>
+                <section class="post-header">
+                    <h1 class="post-title">反應遊戲CIRCLES</h1>
+                    <div class="post-subtitle">關於我做了一個反應網頁遊戲這檔事</div>
+                    <section class="header-tags">
+                        <span class="header-tag">
+                            <time class="post-time">
+                                <span class="material-icons-outlined icon">today</span>
+                                2023.7.28
+                            </time>
+                        </span>
+                        <span class="header-tag">
+                            <time class="update-time">
+                                <span class="material-icons-outlined icon">event_available</span>
+                                2023.7.29
+                            </time>
+                        </span>
+                        <span class="header-tag">
+                            <span class="material-icons-outlined icon">folder</span>
+                            <a href="../pages/categories.html/#遊戲製作">遊戲製作</a>
+                        </span>
+                        <span class="header-tag">
+                            <span class="material-icons icon">edit</span>
+                            1026
+                        </span>
+                    </section>
+                </section>
+
+                <nav class="toc">
+                    <h2 class="toc-title">Content</h2>
+                    <ul class="toc-contents">
+                        <li><a href="#遊戲連結">遊戲連結</a></li>
+                        <li><a href="#前言">前言</a></li>
+                        <li><a href="#遊戲介紹">遊戲介紹</a></li>
+                        <li>
+                            <a href="#製作歷程">製作歷程</a>
+                            <ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h2 id="遊戲連結">遊戲連結</h2>
+                <section class="paragraph">
+                    <p>遊戲本體：<a href="https://c-w-z.github.io/circles/" target="_blank">https://c-w-z.github.io/circles/</a></p>
+                    <p>原始碼：<a href="https://github.com/C-W-Z/circles" target="_blank">https://github.com/C-W-Z/circles</a></p>
+                </section>
+
+                <h2 id="前言">前言</h2>
+                <section class="paragraph">
+                    <p>之所以會想做這個遊戲，主要是因為曾經玩過一款叫做Madobu的遊戲，他還有個前作叫Madosa，但是好像已經從Play商店下架了。這兩個遊戲玩法幾乎一樣，基本上和我這個遊戲的EASY模式差不多。</p>
+					<p>剛好最近比較無聊，就做了一個和Madobu有點像但更加複雜(更難)的網頁遊戲，順便學一點TypeScript，至於為什麼叫CIRCLES，單純只是因為這遊戲裡有很多圓而已XD。</p>
+					<p>順便一提，出乎意料之外，原本預計要3天的時間，結果剛好2天就做完了。</p>
+                </section>
+                
+                <h2 id="遊戲介紹">遊戲介紹</h2>
+                <section class="paragraph">
+                    <p>玩法很簡單，選擇難度之後立即開始，當白色的的球碰到大圓上白色的線時點擊/按任意鍵就可以消除所有碰到線的球，同時得分。如果球移動超過線但你沒有反應過來，或者是你在球碰到線之前就點擊/按任意鍵的話，遊戲就會結束。</p>
+                    <p>每個難度都有好幾個階段，基本上會越來越難，INSANE模式到後面根本不是人玩的，我看電腦auto只覺得太瘋狂了。</p>
+                </section>
+
+                <h2 id="製作歷程">製作歷程</h2>
+                <section class="paragraph">
+                    這個遊戲我是用TypeScript寫的，大家似乎都很推TypeScript(跟原生JavaScript比較的話)，就來學學看。寫完這個遊戲之後，我感覺TypeScript其實也沒有很難(也可能只是我寫的遊戲太簡單？)，只是比較麻煩，它對各種情況都很嚴謹，例如說如果<code class="language-typescript">let a:number|null=null</code>，你就不能直接做和a有關的運算，而是要在前面加上<code class="language-typescript">if (a!=null)</code>的判斷(當然這個例子可以直接用<code class="language-typescript">Number(a)</code>，但如果是更複雜的type就不行了)。
+                    <p>和花牌遊戲比起來，我這次用了2層canvas，下面那層畫大圓和線，平常只要更新上面那層的小球位置就行了，可以減少一點點資源的使用。之後我可能會把花牌遊戲也更新成多個canvas，其實那時候我就有嘗試了，但一直做不出來，主要是canvas重疊的部分，現在剛好紀錄一下要怎麼做：</p>
+<pre><code class="language-html">
+&lt;body&gt;
+    &lt;div class="canvases"&gt;
+        &lt;canvas id="canvas1"&gt;&lt;/canvas&gt;
+        &lt;canvas id="canvas2"&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<pre><code class="language-css">
+.canvases { position: relative; }
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+</code></pre>
+                    <p>真的意外的非常簡單，只要這樣2個canvas就會重疊在一起，而且會隨著.canvases的位置移動，頂多再在.canvases和canvas都加個width和height標籤。</p>
+                    <p>另外，像這種畫圓的，把原點設在中心點會真的會簡單很多。即<code class="language-typescript">context?.setTransform(1, 0, 0, 1, canvas.width/2, canvas.height/2)</code>或<code class="language-typescript">context?.translate(canvas.width/2, canvas.height/2)</code>。</p>
+                    <p>除此之外，這個遊戲的程式本身真的沒什麼好講的，唯一比較可惜的就是生成小球的code了，因為我是直接暴力random生成，不符合條件(例如靠太近)就重生一遍，導致我測試的時候遇到過幾次無窮迴圈整個卡住(因為360度塞不下了，下一顆球不管生在哪都不符合條件)，後來改成如果重來超過10次就停下才解決，但是這只是治標而已，以後有時間應該改寫一下算法，讓它能夠一次就生成符合條件又夠隨機的小球們。</p>
+                    <p>其實還有一點，就是我原本有做小球之間的碰撞，想說同一圈的每個小球方向也可以隨機，然後會互相碰撞，那個函式我沒有刪掉，但是考慮到那樣的話遊戲也未免太複雜了，會整個眼花撩亂，所以就沒有啟用。</p>
+                </section>
+
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <a href="https://github.com/C-W-Z/c-w-z.github.io" target="_blank">© 2023 C-W-Z</a>
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>
+    </footer>
+
+    <script src="../prism/prism.js"></script>
+</body>
+
+</html>

@@ -206,7 +206,7 @@ canvas.style.height = SCREEN_H * scaleRate + 'px';
                     </ul>
 
                     <p>這一部份有很多東西可以講，但我決定還是只說洗牌、畫畫面、電腦決策、資廖上傳下載儲存這幾件事。</p>
-                    <p>首先洗牌最簡單，有一個很有名的算法叫做Fisher-Yates演算法，原理很像insertion sort的random版。</p>
+                    <p>首先洗牌最簡單，有一個很有名的算法叫做Fisher-Yates演算法，原理很像selection sort的random版。</p>
 <pre><code class="language-javascript">
 for (let i = deck.length - 1; i > 0; i--) {
     const r = Math.floor(Math.random() * (i + 1));

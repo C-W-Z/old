@@ -57,7 +57,7 @@ html {
     --btn-hover-selected-color: #ff2400;
 }
 body {
-    min-height: 100vh;
+    min-height: 100dvh;
     background: var(--background-color);
     color: var(--text-color);
     font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
@@ -152,7 +152,7 @@ footer a:hover {
 /* Header Styles */
 header {
     position: fixed;
-    width: 100vw;
+    width: 100dvw;
     z-index: 3;
     top: 0;
     left: 0;

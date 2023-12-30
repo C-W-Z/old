@@ -106,8 +106,19 @@ dfn {
 
 #profile-description {
     text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#profile-description .header-tags {
+.header-tags {
+    width: 8rem;
     margin-top: 1rem;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
 }

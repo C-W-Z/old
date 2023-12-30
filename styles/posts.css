@@ -23,6 +23,6 @@ article {
     justify-content: center;
 }
 
-.header-tags {
-    text-align: start;
+a.btn {
+    width: 11rem;
 }

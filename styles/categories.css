@@ -33,7 +33,7 @@ details[open] > summary::after {
     margin-top: 2.5rem;
 }
 article {
-    margin: 2.5rem 1rem 2.5rem 1rem;
+    margin: 1rem 1rem 2.5rem 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -41,6 +41,6 @@ article {
     justify-content: center;
 }
 
-.header-tags {
-    text-align: start;
+a.btn {
+    width: 11rem;
 }

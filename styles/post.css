@@ -9,9 +9,11 @@ article {
 }
 .post-title {
     font-size: 2rem;
+    font-family: 'EB Garamond', 'Caudex', 'Microsoft-Yahei';
 }
 .post-subtitle {
     margin: 0.25rem;
+    font-family: 'EB Garamond', 'Caudex', 'Microsoft-Yahei';
 }
 
 .toc {

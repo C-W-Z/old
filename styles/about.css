@@ -22,10 +22,10 @@ dfn {
 
 #profile-background {
     position: relative;
-    background: url("../img/wallpaper.jpg") center;
+    background: url("../img/profile_background.webp") center;
     background-size: cover;
     background-attachment: fixed;
-    
+
     border-radius: 20px;
     margin-bottom: 2rem;
 }

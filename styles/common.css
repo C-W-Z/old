@@ -333,3 +333,25 @@ a.btn:hover::before {
     right: 0;
     opacity: 1;
 }
+
+
+.txt-right {
+    text-align: right;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.stretch-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.red {
+    color: red
+}
+.bold {
+    font-weight: bold;
+}

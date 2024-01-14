@@ -9,11 +9,11 @@ article {
 }
 .post-title {
     font-size: 2rem;
-    font-family: 'EB Garamond', 'Caudex', 'Ubuntu', 'Microsoft-Yahei';
+    font-family: 'EB Garamond', 'Caudex', 'Ubuntu', 'LXGW Bold', 'Microsoft-Yahei';
 }
 .post-subtitle {
     margin: 0.25rem;
-    font-family: 'Ubuntu', 'Microsoft-Yahei';
+    font-family: 'Ubuntu', 'LXGW Regular', 'Microsoft-Yahei';
 }
 
 .toc {
@@ -33,7 +33,7 @@ article {
 article h2 {
     margin: 2.5rem 0;
     font-size: 1.8rem;
-    font-family: 'EB Garamond', 'Caudex', 'Microsoft-Yahei';
+    font-family: 'EB Garamond', 'Caudex', 'LXGW Bold', 'Microsoft-Yahei';
     position: relative;
 }
 article h2::before {
@@ -49,7 +49,7 @@ article h2::before {
 .paragraph h3 {
     margin: 1rem 0;
     font-size: 1.4rem;
-    font-family: 'Caudex', 'EB Garamond', 'Microsoft-Yahei';
+    font-family: 'Caudex', 'EB Garamond', 'LXGW Bold', 'Microsoft-Yahei';
 }
 .paragraph ul {
     margin: 0.5rem 1rem;

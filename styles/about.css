@@ -65,8 +65,9 @@ dfn {
     margin: 1rem 0 0.5rem 0;
 }
 #real-name {
-    font-weight: 600;
+    /* font-weight: 600; */
     margin-bottom: 0.2rem;
+    font-family: 'LXGW Regular', 'Microsoft-Yahei';
 }
 
 #site-state {

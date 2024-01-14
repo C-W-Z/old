@@ -13,6 +13,7 @@ main section {
 .blog-description {
     margin-top: 0.5rem;
     font-size: 1rem;
+    font-family: 'EB Garamond', 'LXGW Light', 'Microsoft-Yahei';
 }
 
 .articles {

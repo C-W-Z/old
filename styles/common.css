@@ -11,6 +11,19 @@
 /* Google Font Import - Caudex */
 @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@font-face {
+    font-family: 'LXGW Light';
+    src: url('../font/LXGWWenKai-Light.ttf');
+}
+@font-face {
+    font-family: 'LXGW Regular';
+    src: url('../font/LXGWWenKai-Regular.ttf');
+}
+@font-face {
+    font-family: 'LXGW Bold';
+    src: url('../font/LXGWWenKai-Bold.ttf');
+}
+
 html {
     font-size: 18px;
     scroll-behavior: smooth;
@@ -22,7 +35,7 @@ html {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    font-family: 'Source Code Pro', monospace, 'Microsoft-Yahei', Arial, sans-serif;
+    font-family: 'Source Code Pro', monospace, 'LXGW Light', 'Microsoft-Yahei', Arial, sans-serif;
 }
 :root {
     /* Theme Colors */
@@ -46,7 +59,7 @@ html {
 
     --background-color: #1e1e1e;
     --scrollbar-color: #1e1e1e;
-    --scrollbar-hover-color: #a3a3a3;
+    --scrollbar-hover-color: #919191;
     --selected-color: #c0e4dc4b;
     --blockquote-color: #000000;
     --mark-color: #ccc541;
@@ -100,17 +113,19 @@ a::-moz-selection {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'EB Garamond', 'Caudex', 'Poppins';
+    font-family: 'EB Garamond', 'Caudex', 'Poppins', 'LXGW Bold', 'Microsoft-Yahei', Arial, sans-serif;
 }
 p {
-    font-family: 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
+    font-family: 'LXGW Light', 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
+    line-height: 1.9rem;
+    letter-spacing: 0.05rem;
 }
 a {
     color: var(--link-color);
     cursor: pointer;
     text-decoration: none;
     transition: 0.3s color;
-    font-family: 'Ubuntu', 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
+    font-family: 'Ubuntu', 'Poppins', 'LXGW Light', 'Microsoft-Yahei', Arial, sans-serif;
 }
 a:hover {
     color: var(--link-hover-color);

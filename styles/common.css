@@ -13,15 +13,15 @@
 
 @font-face {
     font-family: 'LXGW Light';
-    src: url('../font/LXGWWenKai-Light.ttf');
+    src: url('../font/LXGWWenKaiLite-Light.ttf');
 }
 @font-face {
     font-family: 'LXGW Regular';
-    src: url('../font/LXGWWenKai-Regular.ttf');
+    src: url('../font/LXGWWenKaiLite-Regular.ttf');
 }
 @font-face {
     font-family: 'LXGW Bold';
-    src: url('../font/LXGWWenKai-Bold.ttf');
+    src: url('../font/LXGWWenKaiLite-Bold.ttf');
 }
 
 html {
@@ -114,6 +114,7 @@ a::-moz-selection {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'EB Garamond', 'Caudex', 'Poppins', 'LXGW Bold', 'Microsoft-Yahei', Arial, sans-serif;
+    letter-spacing: 0.05rem;
 }
 p {
     font-family: 'LXGW Light', 'Poppins', 'Microsoft-Yahei', Arial, sans-serif;
@@ -369,4 +370,7 @@ a.btn:hover::before {
 }
 .bold {
     font-weight: bold;
+}
+.font-code {
+    font-family: 'Source Code Pro', monospace, 'LXGW Light', 'Microsoft-Yahei', Arial, sans-serif;
 }

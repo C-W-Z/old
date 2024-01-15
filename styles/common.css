@@ -342,19 +342,8 @@ a.btn:hover::before {
     opacity: 1;
 }
 
-
 .txt-right {
     text-align: right;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-.stretch-vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .red {
